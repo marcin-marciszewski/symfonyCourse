@@ -1,0 +1,522 @@
+{
+    "totals": {
+        "errors": 0,
+        "file_errors": 85
+    },
+    "files": {
+        "/var/www/project/src/Controller/AdminController.php": {
+            "errors": 5,
+            "messages": [
+                {
+                    "message": "Method App\\Controller\\AdminController::getAllCategories() has parameter $editedCategory with no type specified.",
+                    "line": 88,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Controller\\AdminController::saveCategory() has no return type specified.",
+                    "line": 95,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Controller\\AdminController::saveCategory() has parameter $category with no type specified.",
+                    "line": 95,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Controller\\AdminController::saveCategory() has parameter $form with no type specified.",
+                    "line": 95,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Controller\\AdminController::saveCategory() has parameter $request with no type specified.",
+                    "line": 95,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/project/src/Controller/FrontController.php": {
+            "errors": 7,
+            "messages": [
+                {
+                    "message": "Method App\\Controller\\FrontController::videoListCategory() has parameter $categoryname with no type specified.",
+                    "line": 22,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Controller\\FrontController::videoListCategory() has parameter $id with no type specified.",
+                    "line": 22,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Controller\\FrontController::videoListCategory() has parameter $page with no type specified.",
+                    "line": 22,
+                    "ignorable": true
+                },
+                {
+                    "message": "Call to an undefined method Doctrine\\Persistence\\ObjectRepository<App\\Entity\\Video>::findByChildIds().",
+                    "line": 29,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Controller\\FrontController::searchResults() has parameter $page with no type specified.",
+                    "line": 45,
+                    "ignorable": true
+                },
+                {
+                    "message": "Call to an undefined method Doctrine\\Persistence\\ObjectRepository<App\\Entity\\Video>::findByTitle().",
+                    "line": 51,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Controller\\FrontController::mainCategories() has no return type specified.",
+                    "line": 82,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/project/src/DataFixtures/CategoryFixtures.php": {
+            "errors": 25,
+            "messages": [
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadMainCategories() has no return type specified.",
+                    "line": 22,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadMainCategories() has parameter $manager with no type specified.",
+                    "line": 22,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadElectronics() has no return type specified.",
+                    "line": 33,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadElectronics() has parameter $manager with no type specified.",
+                    "line": 33,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadComputers() has no return type specified.",
+                    "line": 38,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadComputers() has parameter $manager with no type specified.",
+                    "line": 38,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadLaptops() has no return type specified.",
+                    "line": 43,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadLaptops() has parameter $manager with no type specified.",
+                    "line": 43,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadBooks() has no return type specified.",
+                    "line": 48,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadBooks() has parameter $manager with no type specified.",
+                    "line": 48,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadMovies() has no return type specified.",
+                    "line": 53,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadMovies() has parameter $manager with no type specified.",
+                    "line": 53,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadRomance() has no return type specified.",
+                    "line": 58,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadRomance() has parameter $manager with no type specified.",
+                    "line": 58,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadSubcategories() has no return type specified.",
+                    "line": 63,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadSubcategories() has parameter $category with no type specified.",
+                    "line": 63,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadSubcategories() has parameter $manager with no type specified.",
+                    "line": 63,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::loadSubcategories() has parameter $parent_id with no type specified.",
+                    "line": 63,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::getMainCategoriesData() has no return type specified.",
+                    "line": 77,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::getElectronicsData() has no return type specified.",
+                    "line": 87,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::getComputersData() has no return type specified.",
+                    "line": 96,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::getLaptopsData() has no return type specified.",
+                    "line": 104,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::getBooksData() has no return type specified.",
+                    "line": 118,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::getMoviesData() has no return type specified.",
+                    "line": 127,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\DataFixtures\\CategoryFixtures::getRomanceData() has no return type specified.",
+                    "line": 136,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/project/src/DataFixtures/VideoFixtures.php": {
+            "errors": 1,
+            "messages": [
+                {
+                    "message": "Method App\\DataFixtures\\VideoFixtures::VideoData() has no return type specified.",
+                    "line": 27,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/project/src/Entity/Category.php": {
+            "errors": 2,
+            "messages": [
+                {
+                    "message": "Property App\\Entity\\Category::$subcategory with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types: TKey, T",
+                    "line": 31,
+                    "ignorable": true,
+                    "tip": "You can turn this off by setting checkGenericClassInNonGenericObjectType: false in your %configurationFile%."
+                },
+                {
+                    "message": "Property App\\Entity\\Category::$videos with generic interface Doctrine\\Common\\Collections\\Collection does not specify its types: TKey, T",
+                    "line": 34,
+                    "ignorable": true,
+                    "tip": "You can turn this off by setting checkGenericClassInNonGenericObjectType: false in your %configurationFile%."
+                }
+            ]
+        },
+        "/var/www/project/src/Repository/VideoRepository.php": {
+            "errors": 11,
+            "messages": [
+                {
+                    "message": "Access to an undefined property App\\Repository\\VideoRepository::$paginator.",
+                    "line": 24,
+                    "ignorable": true,
+                    "tip": "Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property"
+                },
+                {
+                    "message": "Method App\\Repository\\VideoRepository::findAllPaginated() has no return type specified.",
+                    "line": 27,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Repository\\VideoRepository::findAllPaginated() has parameter $page with no type specified.",
+                    "line": 27,
+                    "ignorable": true
+                },
+                {
+                    "message": "Access to an undefined property App\\Repository\\VideoRepository::$paginator.",
+                    "line": 31,
+                    "ignorable": true,
+                    "tip": "Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property"
+                },
+                {
+                    "message": "Method App\\Repository\\VideoRepository::findByChildIds() has no return type specified.",
+                    "line": 34,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Repository\\VideoRepository::findByChildIds() has parameter $ids with no value type specified in iterable type array.",
+                    "line": 34,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                },
+                {
+                    "message": "Access to an undefined property App\\Repository\\VideoRepository::$paginator.",
+                    "line": 43,
+                    "ignorable": true,
+                    "tip": "Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property"
+                },
+                {
+                    "message": "Method App\\Repository\\VideoRepository::findByTitle() return type has no value type specified in iterable type Knp\\Component\\Pager\\Pagination\\PaginationInterface.",
+                    "line": 46,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                },
+                {
+                    "message": "Method App\\Repository\\VideoRepository::findByTitle() return type with generic interface Knp\\Component\\Pager\\Pagination\\PaginationInterface does not specify its types: TKey, TValue",
+                    "line": 46,
+                    "ignorable": true,
+                    "tip": "You can turn this off by setting checkGenericClassInNonGenericObjectType: false in your %configurationFile%."
+                },
+                {
+                    "message": "Access to an undefined property App\\Repository\\VideoRepository::$paginator.",
+                    "line": 62,
+                    "ignorable": true,
+                    "tip": "Learn more: https://phpstan.org/blog/solving-phpstan-access-to-undefined-property"
+                },
+                {
+                    "message": "Method App\\Repository\\VideoRepository::prepareQuery() return type has no value type specified in iterable type array.",
+                    "line": 65,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                }
+            ]
+        },
+        "/var/www/project/src/Twig/Extension/AppExtension.php": {
+            "errors": 3,
+            "messages": [
+                {
+                    "message": "Method App\\Twig\\Extension\\AppExtension::slugify() has no return type specified.",
+                    "line": 29,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Twig\\Extension\\AppExtension::slugify() has parameter $string with no type specified.",
+                    "line": 29,
+                    "ignorable": true
+                },
+                {
+                    "message": "Parameter #1 $string of function mb_strtolower expects string, string|null given.",
+                    "line": 35,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/project/src/Twig/Runtime/AppExtensionRuntime.php": {
+            "errors": 2,
+            "messages": [
+                {
+                    "message": "Method App\\Twig\\Runtime\\AppExtensionRuntime::doSomething() has no return type specified.",
+                    "line": 14,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Twig\\Runtime\\AppExtensionRuntime::doSomething() has parameter $value with no type specified.",
+                    "line": 14,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/project/src/Utils/AbstractClasses/CategoryTreeAbstract.php": {
+            "errors": 11,
+            "messages": [
+                {
+                    "message": "Property App\\Utils\\AbstractClasses\\CategoryTreeAbstract::$dbconnection has no type specified.",
+                    "line": 11,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\AbstractClasses\\CategoryTreeAbstract::$categoriesArrayFromDb has no type specified.",
+                    "line": 12,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\AbstractClasses\\CategoryTreeAbstract::$categoryList has no type specified.",
+                    "line": 13,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\AbstractClasses\\CategoryTreeAbstract::$slugger has no type specified.",
+                    "line": 14,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\AbstractClasses\\CategoryTreeAbstract::$mainParentName has no type specified.",
+                    "line": 15,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\AbstractClasses\\CategoryTreeAbstract::$mainParentId has no type specified.",
+                    "line": 16,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\AbstractClasses\\CategoryTreeAbstract::$currentCategoryName has no type specified.",
+                    "line": 17,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Utils\\AbstractClasses\\CategoryTreeAbstract::getCategoryList() has no return type specified.",
+                    "line": 25,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Utils\\AbstractClasses\\CategoryTreeAbstract::getCategoryList() has parameter $categories_array with no value type specified in iterable type array.",
+                    "line": 25,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                },
+                {
+                    "message": "Method App\\Utils\\AbstractClasses\\CategoryTreeAbstract::buildTree() return type has no value type specified in iterable type array.",
+                    "line": 27,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                },
+                {
+                    "message": "Method App\\Utils\\AbstractClasses\\CategoryTreeAbstract::getCategories() return type has no value type specified in iterable type array.",
+                    "line": 42,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                }
+            ]
+        },
+        "/var/www/project/src/Utils/CategoryTreeAdminList.php": {
+            "errors": 2,
+            "messages": [
+                {
+                    "message": "Method App\\Utils\\CategoryTreeAdminList::getCategoryList() has no return type specified.",
+                    "line": 26,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Utils\\CategoryTreeAdminList::getCategoryList() has parameter $categories_array with no value type specified in iterable type array.",
+                    "line": 26,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                }
+            ]
+        },
+        "/var/www/project/src/Utils/CategoryTreeAdminOptionList.php": {
+            "errors": 2,
+            "messages": [
+                {
+                    "message": "Method App\\Utils\\CategoryTreeAdminOptionList::getCategoryList() has no return type specified.",
+                    "line": 9,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Utils\\CategoryTreeAdminOptionList::getCategoryList() has parameter $categories_array with no value type specified in iterable type array.",
+                    "line": 9,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                }
+            ]
+        },
+        "/var/www/project/src/Utils/CategoryTreeFrontPage.php": {
+            "errors": 11,
+            "messages": [
+                {
+                    "message": "Property App\\Utils\\CategoryTreeFrontPage::$html_1 has no type specified.",
+                    "line": 10,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\CategoryTreeFrontPage::$html_2 has no type specified.",
+                    "line": 11,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\CategoryTreeFrontPage::$html_3 has no type specified.",
+                    "line": 12,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\CategoryTreeFrontPage::$html_4 has no type specified.",
+                    "line": 13,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\CategoryTreeFrontPage::$html_5 has no type specified.",
+                    "line": 14,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\CategoryTreeFrontPage::$html_6 has no type specified.",
+                    "line": 15,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property App\\Utils\\CategoryTreeFrontPage::$html_7 has no type specified.",
+                    "line": 16,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Utils\\CategoryTreeFrontPage::getCategoryList() has no return type specified.",
+                    "line": 31,
+                    "ignorable": true
+                },
+                {
+                    "message": "Method App\\Utils\\CategoryTreeFrontPage::getCategoryList() has parameter $categories_array with no value type specified in iterable type array.",
+                    "line": 31,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                },
+                {
+                    "message": "Method App\\Utils\\CategoryTreeFrontPage::getMainParent() return type has no value type specified in iterable type array.",
+                    "line": 50,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                },
+                {
+                    "message": "Method App\\Utils\\CategoryTreeFrontPage::getChildIds() return type has no value type specified in iterable type array.",
+                    "line": 63,
+                    "ignorable": true,
+                    "tip": "See: https://phpstan.org/blog/solving-phpstan-no-value-type-specified-in-iterable-type"
+                }
+            ]
+        },
+        "/var/www/project/tests/Controllers/AdminControllerCategoriesTest.php": {
+            "errors": 2,
+            "messages": [
+                {
+                    "message": "Property AdminControllerCategoriesTest::$client has no type specified.",
+                    "line": 8,
+                    "ignorable": true
+                },
+                {
+                    "message": "Property AdminControllerCategoriesTest::$em has no type specified.",
+                    "line": 9,
+                    "ignorable": true
+                }
+            ]
+        },
+        "/var/www/project/tests/Twig/SluggerTest.php": {
+            "errors": 1,
+            "messages": [
+                {
+                    "message": "Method App\\Tests\\Twig\\SluggerTest::getSlugs() has no return type specified.",
+                    "line": 22,
+                    "ignorable": true
+                }
+            ]
+        }
+    },
+    "errors": []
+}
