@@ -4,6 +4,7 @@
  * @returns {number|string} - The factorial of the number. Returns "Factorial for negative numbers is undefined" if the number is negative.
  */
 function factorial(num) {
+  1;
   if (num < 0) {
     return "Factorial for negative numbers is undefined";
   }
