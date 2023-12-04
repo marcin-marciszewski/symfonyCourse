@@ -36,6 +36,7 @@ class FrontController extends AbstractController
     #[Route('/video-list/category/{categoryname},{id}/{page}', name: 'video_list', defaults: ['page' => "1"])]
     public function videoList($id, $categoryname, $page, CategoryTreeFrontPage $categories, Request $request): Response
     {
+
         $categories->getCategoryListAndParent($id);
         $ids = $categories->getChildIds($id);
         array_push($ids, $id);
