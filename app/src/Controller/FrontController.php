@@ -2,10 +2,9 @@
 // bin/console doctrine:schema:drop -n -q --force --full-database && rm ./migrations/*.php && bin/console make:migration && bin/console doctrine:migrations:migrate -n -q && bin/console doctrine:fixtures:load -n -q
 namespace App\Controller;
 
+use App\Controller\Traits\Likes;
 use Exception;
-use App\Entity\User;
 use App\Entity\Video;
-use App\Form\UserType;
 use App\Entity\Category;
 use App\Entity\Comment;
 use App\Repository\VideoRepository;
@@ -16,13 +15,12 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
-use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
-use Symfony\Component\Security\Core\Authentication\Token\UsernamePasswordToken;
+
 use Symfony\Component\Security\Core\Authentication\Token\Storage\TokenStorageInterface;
 
 class FrontController extends AbstractController
 {
+    use Likes;
     public function __construct(private TokenStorageInterface $tokenStorage, private RequestStack $requestStack, private ManagerRegistry $doctrine)
     {
     }
@@ -73,42 +71,7 @@ class FrontController extends AbstractController
         return $this->render('front/pricing.html.twig');
     }
 
-    #[Route('/register', name: 'register')]
-    public function register(Request $request,  UserPasswordHasherInterface $passwordHasher): Response
-    {
-        $user = new User;
-        $form = $this->createForm(UserType::class, $user);
-        $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()) {
-            $formData = $form->getData();
-            $user->setName($formData->getName());
-            $user->setLastName($formData->getLastName());
-            $user->setEmail($formData->getEmail());
-            $user->setRoles(['ROLE_USER']);
-
-            $hashedPassword = $passwordHasher->hashPassword(
-                $user,
-                $formData->getPassword()
-            );
-            $user->setPassword($hashedPassword);
-
-            $em = $this->doctrine->getManager();
-            $em->persist($user);
-            $em->flush();
-
-            $this->loginUserAutomatically($user);
-
-            return $this->redirectToRoute('admin_main_page');
-        }
-        return $this->render('front/register.html.twig', ['form' => $form->createView()]);
-    }
-
-    #[Route('/login', name: 'login')]
-    public function login(AuthenticationUtils $helper): Response
-    {
-        return $this->render('front/login.html.twig', ['error' => $helper->getLastAuthenticationError()]);
-    }
 
     #[Route('/logout', name: 'logout')]
     public function logout(): void
@@ -168,70 +131,12 @@ class FrontController extends AbstractController
         return $this->json(['action' => $result, 'id' => $video->getId()]);
     }
 
-    public function likeVideo($video)
-    {
-        $user = $this->doctrine->getRepository(User::class)->find($this->getUser());
-        $user->addLikedVideo($video);
 
-        $em = $this->doctrine->getManager();
-        $em->persist($user);
-        $em->flush();
-
-        return 'liked';
-    }
-
-    public function dislikeVideo($video)
-    {
-        $user = $this->doctrine->getRepository(User::class)->find($this->getUser());
-        $user->addDislikedVideo($video);
-
-        $em = $this->doctrine->getManager();
-        $em->persist($user);
-        $em->flush();
-
-        return 'disliked';
-    }
-
-    public function undoLikeVideo($video)
-    {
-        $user = $this->doctrine->getRepository(User::class)->find($this->getUser());
-        $user->removeLikedVideo($video);
-
-        $em = $this->doctrine->getManager();
-        $em->persist($user);
-        $em->flush();
-
-        return 'undo liked';
-    }
-
-    public function undoDislikeVideo($video)
-    {
-        $user = $this->doctrine->getRepository(User::class)->find($this->getUser());
-        $user->removeDislikedVideo($video);
-
-        $em = $this->doctrine->getManager();
-        $em->persist($user);
-        $em->flush();
-        return 'undo disliked';
-    }
 
     public function mainCategories()
     {
         $categories = $this->doctrine->getRepository(Category::class)->findBy(['parent' => null], ['name' => 'ASC']);
 
         return $this->render('front/_main_categories.html.twig', ['categories' => $categories]);
-    }
-    // add explenetion how loginUserAutomatically function works
-
-    public function loginUserAutomatically($user): void
-    {
-        $token = new UsernamePasswordToken(
-            $user,
-            'main',
-            $user->getRoles()
-        );
-
-        $this->tokenStorage->setToken($token);
-        $this->requestStack->getSession()->set('_security_main', serialize($token));
     }
 }

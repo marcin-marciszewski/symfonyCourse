@@ -98,24 +98,4 @@ class AdminController extends AbstractController
 
         return $this->render('admin/_all_categories.hmtl.twig', ['categories' => $categories, 'editedCategory' => $editedCategory]);
     }
-
-    public function saveCategory($category, $form, $request)
-    {
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $category->setName($request->get('category')['name']);
-
-            $repository = $this->doctrine->getRepository(Category::class);
-            $parent = $repository->find($request->get('category')['parent']);
-            $category->setParent($parent);
-
-            $em = $this->doctrine->getManager();
-            $em->persist($category);
-            $em->flush();
-            return true;
-        }
-
-        return false;
-    }
 }
